@@ -4,7 +4,8 @@
   "description": "DRKcoin",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon --inspect index",
+    "start": "node index",
+    "dev": "nodemon --inspect index",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
