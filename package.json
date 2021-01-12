@@ -2,9 +2,9 @@
   "name": "drkcoin",
   "version": "1.0.0",
   "description": "DRKcoin",
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
-    "start": "nodemon --inspect server",
+    "start": "nodemon --inspect index",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
