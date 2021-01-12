@@ -1,0 +1,45 @@
+.sangiaodich-row {
+    width: 100%;
+    margin: 20px 0;
+    display: flex;
+    padding: 0 10%;
+}
+
+.sangiaodich-column-left {
+    background-color: #1c2230;
+    z-index: 2;
+}
+
+.sangiaodich-column-left h5{
+    color: #fff;
+    font-size: 20px;
+    text-align: left;
+    margin: 25px 0;
+}
+
+.sangiaodich-column-left h2{
+    color: #fff;
+    font-size: 35px;
+    margin: 25px 0;
+    padding-right: 30px;
+    text-align: left;
+}
+
+.gotoDraken {
+    margin: 20px 0;
+    width: fit-content;
+    display: block;
+    border: 3px #fff solid;
+    border-radius: 10px;
+    padding: 10px 50px;
+    font-size: 22px;
+    text-decoration: none;
+    color: white;
+}
+
+.gotoDraken:hover {
+    text-decoration: none;
+    color: white;
+    transform: scale(1.05);
+    transition: all 0.2s ease-in-out;
+}

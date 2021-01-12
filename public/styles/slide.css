@@ -1,0 +1,7 @@
+.carousel-control-prev, .carousel-control-next {
+    width: 5%;
+}
+
+.carousel-indicators {
+    top: 10px;
+}

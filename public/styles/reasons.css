@@ -1,0 +1,51 @@
+.elementor-row {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.elementor-column.elementor-col-33, .elementor-column[data-col="33"] {
+    width: 33.333%;
+    padding: 5px;
+}
+
+.elementor-widget-wrap>.elementor-element {
+    width: 100%;
+}
+
+.elementor-143 .elementor-element.elementor-element-b994d35 > .elementor-widget-container {
+    border-radius: 8px;
+}
+
+.elementor-widget-image .elementor-image img {
+    vertical-align: middle;
+    display: inline-block;
+    height: auto;
+    max-width: 100%;
+    border: none;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border-radius: 8px;
+}
+
+.elementor-element-populated {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.elementor-heading-title {
+    color: #000000;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.elementor-text-editor {
+    color: #7A7A7A;
+    text-align: center;
+    padding: 10px 30px;
+}

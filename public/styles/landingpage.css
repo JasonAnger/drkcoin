@@ -1,0 +1,46 @@
+.whatis-container {
+    width: 100%;
+}
+
+.whatis-details {
+    width: 50%;
+    margin: 0 25%;
+    text-align: center;
+    padding: 30px 100px;
+    background-color: white;
+    border-radius: 60px;
+    top: -26px;
+    position: relative;
+
+}
+
+.whatis-headtext {
+    margin-bottom: 30px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.whatis-headtext:before {
+    content: "";
+    display: block;
+    margin: 0 auto 35px;
+    width: 171px;
+    height: 3px;
+    background: linear-gradient(90deg,#e22d73 5.56%,#5b6fdc 92.69%);
+    border-radius: 3px;
+}
+
+.whatis-text {
+    font-size: 21px;
+    font-weight: 500;
+    line-height: 35px;
+    color: gray;
+}
+
+.img-fluid {
+    animation: fluid 4s infinite;
+}
+
+@keyframes fluid {
+    50% {transform: translateY(-25px);}
+}

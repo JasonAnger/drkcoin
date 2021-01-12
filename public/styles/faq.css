@@ -1,0 +1,50 @@
+#faq {
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 200px;
+}
+
+.faq-details {
+    position: relative;
+    padding: 0 20%;
+    z-index: 2;
+}
+
+.question-container {
+    padding: 20px 0;
+    background-color: #fff;
+}
+
+.question {
+    font-size: 30px;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.question-text {
+    width: 95%;
+    font-weight: 700;
+}
+
+.question:hover {
+    color:  #4db2a5;
+    transition: all 0.3s ease;
+}
+
+.question:hover svg path {
+    fill: #4db2a5;
+    transition: all 0.3s ease;
+}
+
+.answer {
+    color: gray;
+    font-size: 20px;
+    width: 90%;
+    padding: 8px 13px;
+    opacity: 0;
+    display: none;
+    transition: all 0.3s ease;
+}

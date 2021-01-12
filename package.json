@@ -1,0 +1,26 @@
+{
+  "name": "drkcoin",
+  "version": "1.0.0",
+  "description": "DRKcoin",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon --inspect server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JasonAnger/drkcoin.git"
+  },
+  "author": "Jay An",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JasonAnger/drkcoin/issues"
+  },
+  "homepage": "https://github.com/JasonAnger/drkcoin#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "path": "^0.12.7"
+  }
+}
