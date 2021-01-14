@@ -37,6 +37,11 @@
     color: white;
 }
 
+.sangiaodich-video {
+    width: 800px;
+    height: 400px;
+}
+
 .gotoDraken:hover {
     text-decoration: none;
     color: white;

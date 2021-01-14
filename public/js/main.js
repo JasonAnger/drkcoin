@@ -1,22 +1,27 @@
 window.onscroll = function onScrollWindow() {
-    if(window.scrollY>window.innerHeight && window.innerWidth>1000) {
-        document.getElementById("scrollToTop").style.display="block"
-        if(window.innerWidth>1000)
-            document.getElementById("navigation-bar").className="nav-bar animate__animated animate__slideInDown"
-        document.getElementById("navigation-bar").style.position="fixed"
-        document.getElementById("navigation-bar").style.top="-20px"
-        document.getElementById("navigation-bar").style.boxShadow="none"
-        document.getElementById("navigation-bar").style.transition="all 0.3s ease"
+    setTimeout(() => {
+        if(document.getElementById("main-content"))
+        if (window.outerWidth <= 768) {
+          for (let i = 0; i < document.getElementById("main-content").getElementsByTagName("img").length; i++) {
+            if (Number(document.getElementById("main-content").getElementsByTagName("img")[i].style.width.replace("px", "")) > window.outerWidth) {
+              document.getElementById("main-content").getElementsByTagName("img")[i].style.width = "90vw"
+              document.getElementById("main-content").getElementsByTagName("img")[i].style.height = "auto"
+            }
+          }
+        } else {
+            for (let i = 0; i < document.getElementById("main-content").getElementsByTagName("img").length; i++) {
+                if (Number(document.getElementById("main-content").getElementsByTagName("img")[i].style.width.replace("px", "")) > 500) {
+                  document.getElementById("main-content").getElementsByTagName("img")[i].style.width = "800px"
+                  document.getElementById("main-content").getElementsByTagName("img")[i].style.height = "auto"
+                }
+              }
+        }
+      }, 200)
+    if(window.innerWidth>1000) {
     }
     else {
-        document.getElementById("scrollToTop").style.display="none"
-        document.getElementById("navigation-bar").style.position="absolute"
-        if(window.innerWidth>1000)
-            document.getElementById("navigation-bar").className="nav-bar animate__animated animate__slideInUp animate__faster"
-        document.getElementById("navigation-bar").style.top=0
         if(document.getElementById("nav-list").style.right!=="-100%") {
-            document.getElementById("nav-list").style.right="-100%"
-            document.getElementById("nav-list-holder").style.height="100px"
+            document.getElementById("nav-list").style.display="none"
             document.getElementById("line1").style.transition="all 0.3s ease"
             document.getElementById("line3").style.transition="all 0.3s ease"
             document.getElementById("line2").style.display= "block"
@@ -24,6 +29,7 @@ window.onscroll = function onScrollWindow() {
             document.getElementById("line1").style.marginTop="5px"
             document.getElementById("line3").style.transform= "rotate(0deg)"
             document.getElementById("line3").style.marginTop="5px"
+            document.getElementById("nav-list").style.right="-100%"
         }
     }
 }
@@ -73,22 +79,10 @@ function slideTo(item){
             window.scrollTo({top: document.getElementById(item).offsetTop, behavior: 'smooth'})
     }
 }
-function outburgerHandleClick() {
-    document.getElementById("nav-list-holder").style.zIndex=20
-    document.getElementById("nav-list").style.right="-100%"
-    document.getElementById("line1").style.transition="all 0.3s ease"
-    document.getElementById("line3").style.transition="all 0.3s ease"
-    document.getElementById("line2").style.display= "block"
-    document.getElementById("line1").style.transform= "rotate(0deg)"
-    document.getElementById("line1").style.marginTop="5px"
-    document.getElementById("line3").style.transform= "rotate(0deg)"
-    document.getElementById("line3").style.marginTop="5px"
-}
 function burgerHandleClick() {
-    document.getElementById("nav-list").style.transition="all 0.3s ease"
-    if(document.getElementById("nav-list").style.right=="-100%") {
-        document.getElementById("nav-list-holder").style.zIndex=100
-        document.getElementById("nav-list-holder").style.height="100%"
+    if(document.getElementById("nav-list").style.right=="-100%" || document.getElementById("nav-list").style.right=="") {
+        document.getElementById("nav-list").style.display="block"
+        document.getElementById("nav-list").style.transition="all 0.3s ease-in"
         document.getElementById("line1").style.transition="all 0.3s ease"
         document.getElementById("line3").style.transition="all 0.3s ease"
         document.getElementById("line2").style.display= "none"
@@ -99,8 +93,7 @@ function burgerHandleClick() {
         document.getElementById("nav-list").style.right="0%"
     }
     else if(document.getElementById("nav-list").style.right!=="-100%") {
-        document.getElementById("nav-list-holder").style.zIndex=20
-        document.getElementById("nav-list-holder").style.height="100px"
+        document.getElementById("nav-list").style.display="none"
         document.getElementById("line1").style.transition="all 0.3s ease"
         document.getElementById("line3").style.transition="all 0.3s ease"
         document.getElementById("line2").style.display= "block"

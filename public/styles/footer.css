@@ -1,0 +1,76 @@
+#contact {
+    min-height: 400px;
+}
+
+.lienhecontainer {
+    display: flex; 
+    justify-content: center;
+}
+
+.lienhecontainer:hover .fa-phone{
+    animation: ringphone 0.5s infinite;
+}
+
+@keyframes ringphone {
+    50% {transform: rotate(-30deg);}
+}
+
+footer {
+    width: 100%;
+    background-color: #111319;
+    min-height: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.footer-container {
+    width: 100%;
+    padding: 40px 0 20px 0;
+}
+
+.footer-links {
+    width: 60%;
+    margin-left: 20%;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.footer-links li {
+    width: 16.6%;
+    text-align: center;
+}
+
+.footer-links li a, a:hover{
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 20px;
+    color: #4db2a5;
+}
+
+.company {
+    vertical-align: middle;
+    text-align: center;
+}
+
+.company img {
+    height: 40px;
+    margin-bottom: 15px;
+}
+
+.company-name {
+    color: white;
+    margin-left: 10px;
+    font-size: 30px;
+    line-height: 40px;
+    font-weight: 700;
+}
+
+.company-copyright {
+    display: block;
+    width: 100%;
+    text-align: center;
+    color: rgba(165, 165, 165, 0.562);
+}

@@ -1,3 +1,9 @@
+.cover-img {
+    width: 70%; 
+    margin-left: 15%;
+    height: auto;
+}
+
 .whatis-container {
     width: 100%;
 }
@@ -35,6 +41,13 @@
     font-weight: 500;
     line-height: 35px;
     color: gray;
+}
+
+#dtrade {
+    background: url('/images/bg.jpg');
+    background-position: center;
+    background-size: cover; 
+    padding: 100px;
 }
 
 .img-fluid {

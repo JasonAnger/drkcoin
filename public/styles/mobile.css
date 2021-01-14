@@ -1,0 +1,70 @@
+@media screen and (max-width: 1200px) {
+    .cover-img {
+        width: 100%; 
+        margin-left: 0;
+        height: auto;
+    }
+    .topleftdot, .bottomrightdot {
+        width: 100px;
+    }
+    .whatis-details {
+        width: 90%;
+        margin: 0 5%;
+        text-align: center;
+        padding: 30px 5px;
+        background-color: white;
+        border-radius: 60px;
+        top: -26px;
+        position: relative;
+    }
+    .whatis-headtext {
+        margin-bottom: 30px;
+        padding: 0 10px;
+        text-align: center;
+        font-weight: 700;
+        z-index: 5;
+        position: relative;
+    }
+    .ant-row {
+        width: 100%;
+        margin-right: 0;
+        margin-left: 0;
+    }
+    .ant-col-lg-8 {
+        width: 100%;
+    }
+    .elementor-column.elementor-col-33, .elementor-column[data-col="33"] {
+        width: 100%;
+        padding: 5px;
+    }
+    #dtrade {
+        padding: 30px;
+    }
+    .sangiaodich-row {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .sangiaodich-video {
+        width: 100%;
+        height: 300px;
+    }
+    .faq-details {
+        padding: 0 20px;
+    }
+    .footer-links {
+        flex-direction: column;
+    }
+    .footer-links li {
+        width: 100%;
+    }
+    .gotoDraken {
+        padding: 10px 20px;
+        font-size: 22px;
+        font-weight: 700;
+    }
+    .post-container {
+        width: 100%;
+        margin-left: 0;
+        padding: 0 0;
+    }
+}

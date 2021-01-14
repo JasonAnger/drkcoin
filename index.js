@@ -3,7 +3,16 @@ const bodyParser = require('body-parser')
 
 const path = require('path')
 
-const port = process.env.PORT || 3000
+const mongoose = require('mongoose')
+
+const port = process.env.PORT || 8080
+
+const Post = require('./models/Post.model')
+require('dotenv').config()
+mongoose.connect(process.env.MONGO, {useNewUrlParser: true, useUnifiedTopology: true}).then(() => {
+    console.log("Mongo Connection is success.")
+}).catch(error => handleError(error));
+
 
 const app = express()
 
@@ -19,6 +28,21 @@ app.use(express.static('public'))
 
 app.get('/', function(req,res){
     res.render('index')
+})
+
+app.get('/sangiaodich', async (req,res) => {
+    const post = await Post.where('tags').in(['btcv'])
+    res.render('sangiaodich', {posts: post})
+})
+
+app.get('/huongdan',  async (req,res) => {
+    const post = await Post.where('tags').in(['btcv'])
+    res.render('huongdan', {posts: post})
+})
+
+app.get('/posts/:id',  async (req,res) => {
+    const post = await Post.findOne({_id: req.params.id})
+    res.render('post', {post: post})
 })
 
 app.use('/*', function(req,res){

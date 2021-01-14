@@ -1,13 +1,19 @@
 <nav>
-    <div class="logo-container"><a href="/"><img height="56" src="/images/drk-nakamoto.png" alt=""></a></div>
-    <div class="nav-container">
+    <div class="logo-container"><a href="/"><img src="/images/drk-nakamoto.png" alt=""></a></div>
+    <div id="burger-nav" onclick="burgerHandleClick()">
+        <div class="burger-line" id="line1"></div>
+        <div class="burger-line" id="line2"></div>
+        <div class="burger-line" id="line3"></div>
+    </div>
+    <div id="nav-list" class="nav-container">
         <ul>
-            <li><a onclick="slideTo('drk')" href="#drk">DRK</a></li>
+            <li><a onclick="slideTo('drk')" href="/#drk">DRK</a></li>
             <li><a href="/sangiaodich">SÀN GIAO DỊCH</a></li>
             <li><a href="https://dtrade.live/">DTRADE</a></li>
             <li><a href="/huongdan">HƯỚNG DẪN</a></li>
-            <li><a href="/faq">FAQ</a></li>
-            <li><a id="contactnav" href="#">LIÊN HỆ <i style="padding: 0px 10px;" class="fas fa-phone"></i></a></li>
+            <li><a onclick="slideTo('faq')" href="/#faq">FAQ</a></li>
+            <li><a href="tel:+84383336845" id="contactnav" href="#">LIÊN HỆ <i style="padding: 0px 10px;"
+                        class="fas fa-phone"></i></a></li>
         </ul>
     </div>
 </nav>
