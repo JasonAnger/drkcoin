@@ -67,4 +67,9 @@
         margin-left: 0;
         padding: 0 0;
     }
+    .key-features .feature-item {
+        padding-bottom: 50px;
+        min-height: 280px;
+        height: auto;
+    }
 }

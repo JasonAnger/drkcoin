@@ -30,13 +30,18 @@ app.get('/', function(req,res){
     res.render('index')
 })
 
+app.get('/nakamotofund', async (req,res) => {
+    const post = await Post.where('tags').in(['nakamotofund','tridancoin'])
+    res.render('nakamotofund', {posts: post})
+})
+
 app.get('/sangiaodich', async (req,res) => {
-    const post = await Post.where('tags').in(['btcv'])
+    const post = await Post.where('tags').in(['sgd','tridancoin'])
     res.render('sangiaodich', {posts: post})
 })
 
 app.get('/huongdan',  async (req,res) => {
-    const post = await Post.where('tags').in(['btcv'])
+    const post = await Post.where('tags').in(['huongdan','tridancoin'])
     res.render('huongdan', {posts: post})
 })
 

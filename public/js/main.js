@@ -54,7 +54,7 @@ function clickQuestion(item) {
             document.getElementById(item).style.opacity=0
         }, 700)
     }
-    for(let i=1; i<11; i++) {
+    for(let i=1; i<10; i++) {
         if("answer"+i!==item) {
             document.getElementById("answer"+i).className="answer animate__animated animate__fadeOut"
             document.getElementById("q"+"answer"+i).getElementsByTagName("div")[0].style.color=""

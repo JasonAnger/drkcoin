@@ -3,20 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= post.title %> - Trí Dân Coin</title>
+    <title>Nakamoto Fund - Trí Dân Coin</title>
     <%- include('partials/styles') %> 
 </head>
 <body>
     <div class="head-above-nav"></div>
     <%- include('partials/navbar') %>
-    <div id="content-holder">
-        <div id="main-content">
-          <h1>
-            <%= post.title %>
-          </h1>
-          <%- post.content %>
-        </div>
-      </div>
+    <div class="post-container">
+        <%- include('partials/postlist') %>
+    </div>
     <%- include('partials/footer') %> 
 </body>
 </html>
