@@ -41,7 +41,7 @@ app.get('/sangiaodich', async (req,res) => {
 })
 
 app.get('/huongdan',  async (req,res) => {
-    const post = await Post.where('tags').in(['huongdan','tridancoin'])
+    const post = await Post.where('tags').in(['huongdandrk','tridancoin'])
     res.render('huongdan', {posts: post})
 })
 
