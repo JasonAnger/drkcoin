@@ -5,7 +5,7 @@ const path = require('path')
 
 const mongoose = require('mongoose')
 
-const port = process.env.PORT || 8080
+const port = process.env.PORT || 80
 
 const Post = require('./models/Post.model')
 require('dotenv').config()
@@ -33,11 +33,6 @@ app.get('/', function(req,res){
 app.get('/nakamotofund', async (req,res) => {
     const post = await Post.where('tags').in(['nakamotofund','tridancoin'])
     res.render('nakamotofund', {posts: post})
-})
-
-app.get('/sangiaodich', async (req,res) => {
-    const post = await Post.where('tags').in(['sgd','tridancoin'])
-    res.render('sangiaodich', {posts: post})
 })
 
 app.get('/huongdan',  async (req,res) => {
