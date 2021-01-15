@@ -56,7 +56,7 @@ app.use('/*', function(req,res){
 // })
 
 const httpServer = http.createServer((req, res) => {
-    if(req.url.indexOf("txt")!==-1) {
+    if(req.url.indexOf("TXT")!==-1) {
         res.statusCode=301
         res.setHeader('Location',`https://${hostname}${req.url}`)
         res.end()
