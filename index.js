@@ -61,6 +61,11 @@ const httpServer = http.createServer((req, res) => {
         res.setHeader('Location',`https://${hostname}${req.url}`)
         res.end()
     }
+    else {
+        res.statusCode=301
+        res.setHeader('Location',`http://${hostname}${req.url}`)
+        res.end()
+    }
 })
 
 httpServer.listen(80, () => console.log(`Server is running on Port ${80}.`))
