@@ -1,9 +1,11 @@
 const express = require('express')
 const bodyParser = require('body-parser')
-
+const fs = require('fs')
 const path = require('path')
-
+const https = require('https')
+const http = require('http')
 const mongoose = require('mongoose')
+const hostname = "tridancoin.com"
 
 const port = process.env.PORT || 80
 
@@ -31,12 +33,12 @@ app.get('/', function(req,res){
 })
 
 app.get('/nakamotofund', async (req,res) => {
-    const post = await Post.where('tags').in(['nakamotofund','tridancoin'])
+    const post = await Post.where('tags').in(['nakamotofund'])
     res.render('nakamotofund', {posts: post})
 })
 
 app.get('/huongdan',  async (req,res) => {
-    const post = await Post.where('tags').in(['huongdandrk','tridancoin'])
+    const post = await Post.where('tags').in(['huongdandrk'])
     res.render('huongdan', {posts: post})
 })
 
@@ -49,6 +51,23 @@ app.use('/*', function(req,res){
     res.redirect('/')
 })
 
-app.listen(port, function() {
-    console.log('Listening on port',port)
+// app.listen(port, function() {
+//     console.log('Listening on port',port)
+// })
+
+const httpServer = http.createServer((req, res) => {
+    res.statusCode=301
+    res.setHeader('Location',`https://${hostname}${req.url}`)
+    res.end()
 })
+
+httpServer.listen(80, () => console.log(`Server is running on Port ${80}.`))
+
+const sslServer = https.createServer(
+    {
+        key: fs.readFileSync(path.join(__dirname, 'cert', 'key.pem')), 
+        cert: fs.readFileSync(path.join(__dirname, 'cert', 'cert.pem'))
+    }, app
+)
+
+sslServer.listen(443, () => console.log(`Secure Server is running on Port ${443}.`))

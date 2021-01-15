@@ -72,4 +72,7 @@
         min-height: 280px;
         height: auto;
     }
+    #faq {
+        margin-bottom: 80px;
+    }
 }

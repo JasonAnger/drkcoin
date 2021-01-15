@@ -19,7 +19,7 @@ h4 {
   display: inline-block;
 }
 
-#main-content ul li {
+#main-content ul,ol li {
   margin-left: 30px;
 }
 

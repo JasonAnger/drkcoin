@@ -25,15 +25,16 @@ nav {
 }
 
 .logo-container {
-  width: 40%;
+  width: 30%;
 }
 
 .logo-container img {
   height: 56px;
+  padding-bottom: 10px;
 }
 
 .nav-container {
-  width: 55%;
+  width: 65%;
   height: 100%;
 }
 
@@ -113,5 +114,12 @@ nav {
   }
   #burger-nav {
     display: block;
+  }
+  .logo-container {
+    width: 80%;
+    position: absolute;
+  }
+  .logo-container .company-name {
+    font-size: 28px;
   }
 }
