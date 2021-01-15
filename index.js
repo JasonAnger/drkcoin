@@ -62,7 +62,6 @@ const httpServer = http.createServer((req, res) => {
         res.end()
     }
     else {
-        res.statusCode=301
         res.setHeader('Location',`http://${hostname}${req.url}`)
         res.end()
     }
