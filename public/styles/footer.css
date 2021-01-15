@@ -46,6 +46,13 @@ footer {
     color: #4db2a5;
 }
 
+.footer-link-icon, .footer-link-icon:hover {
+    color: white;
+    font-size: 40px;
+    font-weight: normal;
+    margin: 0px 10px;
+}
+
 .company {
     vertical-align: middle;
     text-align: center;
