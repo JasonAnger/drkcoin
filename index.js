@@ -5,7 +5,7 @@ const path = require('path')
 const https = require('https')
 const http = require('http')
 const mongoose = require('mongoose')
-const hostname = "localhost"
+const hostname = "tridancoin.com"
 
 const port = process.env.PORT || 80
 
