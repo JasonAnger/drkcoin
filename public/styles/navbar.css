@@ -91,7 +91,7 @@ nav {
 
 @media screen and (max-width: 1200px) {
   .nav-container {
-    display: none;
+    display: block;
     position: fixed;
     top: 0;
     right: -100%;

@@ -7,6 +7,10 @@
   display: block;
 }
 
+#main-content ul,ol *{
+  line-break: anywhere;
+}
+
 #main-content h1,
 h2,
 h3,
@@ -96,7 +100,7 @@ h4 {
 
 @media (max-width: 768px) {
   #content-holder {
-    padding: 120px 0% 10px 0%;
+    padding: 0px 0% 10px 0%;
   }
   #main-content {
     display: block;

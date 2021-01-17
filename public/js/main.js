@@ -3,7 +3,7 @@ window.onscroll = function onScrollWindow() {
         if (document.getElementById("main-content"))
             if (window.outerWidth <= 768) {
                 for (let i = 0; i < document.getElementById("main-content").getElementsByTagName("img").length; i++) {
-                    if (Number(document.getElementById("main-content").getElementsByTagName("img")[i].style.width.replace("px", "")) > window.outerWidth) {
+                    if (Number(document.getElementById("main-content").getElementsByTagName("img")[i].style.width.replace("px", "")) > window.outerWidth-100) {
                         document.getElementById("main-content").getElementsByTagName("img")[i].style.width = "90vw"
                         document.getElementById("main-content").getElementsByTagName("img")[i].style.height = "auto"
                     }
@@ -21,8 +21,8 @@ window.onscroll = function onScrollWindow() {
         if (document.getElementById("main-content"))
             if (window.outerWidth <= 768) {
                 for (let j = 0; j < document.getElementById("main-content").getElementsByTagName("iframe").length; j++) {
-                    if (Number(document.getElementById("main-content").getElementsByTagName("iframe")[j].width) > window.outerWidth) {
-                        document.getElementById("main-content").getElementsByTagName("iframe")[j].width = "380"
+                    if (Number(document.getElementById("main-content").getElementsByTagName("iframe")[j].width) > window.outerWidth-50) {
+                        document.getElementById("main-content").getElementsByTagName("iframe")[j].width = "100%"
                         document.getElementById("main-content").getElementsByTagName("iframe")[j].height = "230"
                     }
                 }
@@ -32,7 +32,6 @@ window.onscroll = function onScrollWindow() {
     }
     else {
         if (document.getElementById("nav-list").style.right !== "-100%") {
-            document.getElementById("nav-list").style.display = "none"
             document.getElementById("line1").style.transition = "all 0.3s ease"
             document.getElementById("line3").style.transition = "all 0.3s ease"
             document.getElementById("line2").style.display = "block"
@@ -104,7 +103,6 @@ function burgerHandleClick() {
         document.getElementById("nav-list").style.right = "0%"
     }
     else if (document.getElementById("nav-list").style.right !== "-100%") {
-        document.getElementById("nav-list").style.display = "none"
         document.getElementById("line1").style.transition = "all 0.3s ease"
         document.getElementById("line3").style.transition = "all 0.3s ease"
         document.getElementById("line2").style.display = "block"
